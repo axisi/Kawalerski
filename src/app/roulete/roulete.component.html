@@ -1,0 +1,32 @@
+<div  class="container">
+
+  <div>
+    <h1> {{userService.user?.username}}, powodzenia :)</h1>
+    <h2>Twój bilans pkt: {{userService.user?.score}}</h2>
+  </div>
+
+
+  Wynik: <input [disabled] = "true" [value]="result" [style]="color"> <br>
+
+
+
+    <label for="range" >Stawka: </label>
+    <input type="range" name="gender" id="range" value="other" value="1" step="5" min="5" max="100" [(ngModel)]="stake" (ngModelChange)="changeStake($event)">
+    <input [disabled]="true"  type="text" id="textInput" value="{{stake}}">
+    <br><br><br><br>
+    <button aria-label="czerwone" [disabled]="!isSpinable()" (click)="red()" class="btn btn-danger">Czerwone (x2)</button>
+    <button [disabled]="!isSpinable()" (click)="green()" class="btn btn-success">0 (x36)</button>
+    <button [disabled]="!isSpinable()" (click)="black()" class="btn btn-dark">Czarne (x2)</button>
+
+
+  <br>
+  Zasady: Ruletka ma 37 pól:
+  <ul>
+    <li>1 pole zielone - "0"</li>
+    <li>18 pól czerwonych "parzyste"</li>
+    <li>18 pól czarnych "nieparzyste"</li>
+  </ul>
+
+
+
+</div>

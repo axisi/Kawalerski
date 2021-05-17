@@ -1,0 +1,7 @@
+<div>
+<input [(ngModel)]="score" type="number" >
+<button class="btn btn-success" [disabled]="!score" (click)="action()">Wykonaj</button>
+
+<button class="btn btn-success " (click)="action(100)" >+100</button>
+<button class="btn btn-success" (click)="action(200)">+200</button>
+</div>
